@@ -10,7 +10,7 @@ class Settings {
 
     if (fs.existsSync(this.settingsFile)) {
       this._load()
-      log.info('Stretchly: loading settings')
+      log.info(`Stretchly: loading settings from ${this.settingsFile}`)
       if (Object.keys(this.data).length !== Object.keys(defaultSettings).length) {
         this._loadMissing()
       }

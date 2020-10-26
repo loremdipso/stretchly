@@ -7,7 +7,7 @@ class IdeasLoader {
 
   ideas () {
     return new Shuffled(
-      this.data.filter(item => item.enabled).map(item => item.data)
+      this.data.filter(item => item.enabled)
     )
   }
 }

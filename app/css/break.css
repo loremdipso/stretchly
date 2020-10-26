@@ -26,6 +26,13 @@
   line-height: 46px;
 }
 
+.breaks > :nth-child(1) >  .microbreak-image {
+	max-width: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .breaks > :nth-child(1) >  .break-idea {
   font-size: 36px;
   letter-spacing: 0.52px;

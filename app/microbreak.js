@@ -1,6 +1,7 @@
 const { ipcRenderer, remote } = require('electron')
 const Utils = remote.require('./utils/utils')
 const HtmlTranslate = require('./utils/htmlTranslate')
+const log = require('electron-log')
 
 window.onload = (event) =>
   new HtmlTranslate(document).translate()
@@ -26,7 +27,10 @@ ipcRenderer.on('microbreakIdea', (event, message) => {
   // if (message.length > 100) {
   //   microbreakIdea.style.fontSize = '55px'
   // }
-  microbreakIdea.innerHTML = message
+  log.info('YO!', message)
+  microbreakIdea.innerHTML = message.data
+
+  document.querySelector('.microbreak-image').setAttribute('src', message.imageSrc)
 })
 
 ipcRenderer.on('progress', (event, started, duration, strictMode, postpone, postponePercent, keyboardShortcut) => {

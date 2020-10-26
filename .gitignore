@@ -6,3 +6,4 @@ coverage
 .history
 .vscode
 .idea
+app/images/content/**/*.gif

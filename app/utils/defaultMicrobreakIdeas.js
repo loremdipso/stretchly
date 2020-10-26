@@ -1,39 +1,39 @@
 module.exports = [
-  {
-    data: 'Squats',
-    imageSrc: 'images/content/exercises/Squats.gif',
-    enabled: true
-  },
-  {
-    data: '100 UP',
-    imageSrc: 'images/content/exercises/100 UP.gif',
-    enabled: true
-  },
-  {
-    data: 'Narrow Pushups',
-    imageSrc: 'images/content/exercises/Narrow Pushups.gif',
-    enabled: true
-  },
-  {
-    data: 'Plank With Leg Lift',
-    imageSrc: 'images/content/exercises/Plank With Leg Lift.gif',
-    enabled: true
-  },
-  {
-    data: 'Rear Leg Elevated Squat',
-    imageSrc: 'images/content/exercises/Rear Leg Elevated Squat.gif',
-    enabled: true
-  },
-  {
-    data: 'Squats',
-    imageSrc: 'images/content/exercises/Squats.gif',
-    enabled: true
-  },
-  {
-    data: 'Wide Pushups',
-    imageSrc: 'images/content/exercises/Wide Pushups.gif',
-    enabled: true
-  }
+//   {
+//     data: 'Squats',
+//     imageSrc: 'images/content/exercises/Squats.gif',
+//     enabled: true
+//   },
+//   {
+//     data: '100 UP',
+//     imageSrc: 'images/content/exercises/100 UP.gif',
+//     enabled: true
+//   },
+//   {
+//     data: 'Narrow Pushups',
+//     imageSrc: 'images/content/exercises/Narrow Pushups.gif',
+//     enabled: true
+//   },
+//   {
+//     data: 'Plank With Leg Lift',
+//     imageSrc: 'images/content/exercises/Plank With Leg Lift.gif',
+//     enabled: true
+//   },
+//   {
+//     data: 'Rear Leg Elevated Squat',
+//     imageSrc: 'images/content/exercises/Rear Leg Elevated Squat.gif',
+//     enabled: true
+//   },
+//   {
+//     data: 'Squats',
+//     imageSrc: 'images/content/exercises/Squats.gif',
+//     enabled: true
+//   },
+//   {
+//     data: 'Wide Pushups',
+//     imageSrc: 'images/content/exercises/Wide Pushups.gif',
+//     enabled: true
+//   }
 //   {
 //     data: 'Go grab a glass of water.',
 //     enabled: true

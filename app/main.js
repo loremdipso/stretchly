@@ -1,6 +1,7 @@
 // process.on('uncaughtException', (...args) => console.error(...args))
 const { app, nativeTheme, BrowserWindow, Tray, Menu, ipcMain, shell, dialog, globalShortcut } = require('electron')
 const path = require('path')
+const fs = require('fs')
 const i18next = require('i18next')
 const Backend = require('i18next-node-fs-backend')
 const log = require('electron-log')
@@ -689,10 +690,28 @@ function loadIdeas () {
     microbreakIdeasData = settings.get('microbreakIdeas')
   } else {
     breakIdeasData = require('./utils/defaultBreakIdeas')
-    microbreakIdeasData = require('./utils/defaultMicrobreakIdeas')
+    // microbreakIdeasData = require('./utils/defaultMicrobreakIdeas')
+    microbreakIdeasData = loadIdeasFromFolder('./images/content/exercises')
   }
   breakIdeas = new IdeasLoader(breakIdeasData).ideas()
   microbreakIdeas = new IdeasLoader(microbreakIdeasData).ideas()
+}
+
+// mta
+function loadIdeasFromFolder (baseDir) {
+  const folder = path.resolve(__dirname, baseDir)
+  log.info('folder', folder)
+
+  const files = fs.readdirSync(folder)
+  log.info('files', files)
+
+  return files.map((filename) => {
+    return {
+      data: filename.split('.').slice(0, -1).join('.'),
+      imageSrc: path.join(baseDir, filename),
+      enabled: true
+    }
+  })
 }
 
 function pauseBreaks (milliseconds) {
